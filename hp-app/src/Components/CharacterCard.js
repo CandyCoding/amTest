@@ -1,5 +1,5 @@
 import {useEffect} from 'react'; 
-function Card({characters,setCharacters,getAllCharacters}) {
+function Card({characters,setCharacters,getAllCharacters, name}) {
     useEffect(() => {
         getAllCharacters();
     }

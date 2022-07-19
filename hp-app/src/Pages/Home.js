@@ -14,7 +14,7 @@ function Home() {
       <div className="App">
       <h1>Harry Potter</h1>
       <h2>selecciona tu filtro</h2>
-      <CharacterFilter characters= {characters} setCharacters={setCharacters}/>
+      <CharacterFilter/>
       <Card characters={characters} setCharacters={setCharacters}getAllCharacters={getAllCharacters}/>
   </div>
   );
