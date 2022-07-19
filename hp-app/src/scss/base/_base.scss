@@ -1,0 +1,107 @@
+html,
+body {
+    font-family: var(--font-family);
+    background-image: url('../../../src/assets/hogwarts-castle.jpeg');
+    background-repeat: no-repeat;
+    background-color: var(--color-secondary);
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    color: var(--color-primary);
+}
+
+.cards_container {
+    width: 1200px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card_body {
+    width: 515px;
+    height: 265px;
+    background-color: var(--color-primary);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 16px;
+    box-shadow: 0px 0px 10px black;
+
+    .card__figure {
+        width: 210px;
+        height: 265px;
+        overflow: hidden;
+        padding: 25px;
+    }
+
+    .card__figure img {
+        width: 170px;
+        height: 170px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .house_color {
+        background: var(--Gryffindor);
+        height: 265px;
+        width: 210px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-top-left-radius: 16px;
+        border-bottom-left-radius: 16px;
+    }
+
+
+    .character_name {
+        color: var(--color-secondary);
+        font-size: var(--name);
+        font-weight: var(--semi-bold);
+        position: relative;
+        top: -9px;
+    }
+
+    .character-characteristics-container {
+        width: 300px;
+        max-height: 265px;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 5px;
+        padding: 10px;
+        border-radius: 0, 16px, 16px, 0;
+        position: relative;
+    }
+
+    .character-characteristics-container p {
+        font-size: var(--characteristics);
+    }
+
+    .card_header {
+        width: 50%;
+        display: flex;
+        position: relative;
+        bottom: 22px;
+        color: var(--color-tertiary);
+        font-size: var(--situation);
+        font-weight: var(--semi-bold);
+    }
+
+    .boldch {
+        font-weight: var(--semi-bold);
+    }
+}
