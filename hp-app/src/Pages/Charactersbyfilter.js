@@ -4,14 +4,17 @@ import CharacterFilter from '../Components/CharacterFilter';
 import {useState,useEffect} from 'react';
 function CharactersByFilter(){
     const {name} = useParams();
-    const getAllCharacters = () => {
-        return fetch('http://localhost:3001/characters')
+    const getFilterCharacters = () => {
+        const url= `http://localhost:3001/${name}`;
+        return fetch (
+            url
+        )
         .then(response => response.json())
         .then(data => setCharacters(data));
     }
     const [characters,setCharacters] = useState([]);
     useEffect(() => {
-        getAllCharacters();
+        getFilterCharacters(name);
     }
     ,[]);
     return (
@@ -19,7 +22,7 @@ function CharactersByFilter(){
         <h1>Harry Potter</h1>
         <h2>selecciona tu filtro</h2>
         <CharacterFilter/>
-        <Card characters={characters} setCharacters={setCharacters}getAllCharacters={getAllCharacters}/>
+        <Card characters={characters} setCharacters={setCharacters}getFilterCharacters={getFilterCharacters} name={name}/>
     </div>
     )
 }

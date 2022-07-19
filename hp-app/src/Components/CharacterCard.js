@@ -1,9 +1,13 @@
 import {useEffect} from 'react'; 
-function Card({characters,setCharacters,getAllCharacters, name}) {
+function Card({characters,setCharacters,getAllCharacters,name,getFilterCharacters}) {
     useEffect(() => {
+        if(name === 'howartsStudents'||name === 'hogwartsStaff'){
+         getFilterCharacters(name);
+    } else {
         getAllCharacters();
     }
-    ,[]);
+    },[]);
+
   return (
     <div className='cards_container'>
         <div>

@@ -8,8 +8,8 @@ const CharacterFilter = (character,setCharacters) => {
 
     return (
         <div className="character-filter">
-            <button name='hogwartsStudent' onClick={handleChange}>ESTUDIANTES</button>
-            <button name= 'staff' onClick={handleChange}>STAFF</button>
+            <button name='howartsStudents' onClick={handleChange}>ESTUDIANTES</button>
+            <button name= 'hogwartsStaff' onClick={handleChange}>STAFF</button>
         </div>
         
             );
