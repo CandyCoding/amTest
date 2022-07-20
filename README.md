@@ -14,6 +14,5 @@ Mejoras :
 * Testeos unitarios. 
 * Mejorar el código en los archivos Scss ya que al ser mi primer acercamiento a este preprocesador considero no haber aprovechado su potencial como me hubiese gustado, sin embargo ya es un accionable personal aprender más sobre ello y sobre todas las mejoras antes mencionadas. 
 
-#### Descríbenos un *pain point* o *bug* con el que te hayas encontrado y como lo
-solucionaste.
+#### Descríbenos un *pain point* o *bug* con el que te hayas encontrado y como lo solucionaste.
 Como lo mencioné fue un ejercicio de bastastes retos, en un inicio no lograba posicionar las tarjetas por un elemento div que fue rápidamente de identificar y de eliminar para lograr usar flex y acomodarlas; posterior a ello al intercalar los filtros, si bien las funcion de routeado me dirigia correctamente, no lograba mostrar la data por lo cual realize una funcíon refresh para solucionarlo. 
