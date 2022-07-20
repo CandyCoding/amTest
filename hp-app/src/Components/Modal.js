@@ -1,5 +1,7 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 export default function Modal ({children, handleClose}) {
+    const navigate = useNavigate()
     const [newCharacter, setNewCharacter] = useState(
         { 
             name: "",
@@ -9,15 +11,20 @@ export default function Modal ({children, handleClose}) {
             eyeColour: "",
             hairColour: "",
             image: "",
-            position:""
+            "hogwartsStudent": false,
+            "hogwartsStaff": false,
         }
     )
+    const [refresh, setRefresh] = useState(false)
+
 const handleChange= (e) => {
     setNewCharacter({
         ...newCharacter,
         [e.target.name]: e.target.value
+        
     })
 }
+
 const handleSubmit = (e) => {
     e.preventDefault();
     fetch('http://localhost:3001/characters', {
@@ -31,6 +38,7 @@ const handleSubmit = (e) => {
         .then((data) => {
             console.log(data)
             handleClose();
+            navigate("/")
         }
         )
 }
@@ -62,9 +70,9 @@ const handleSubmit = (e) => {
                     <label>Hombre</label>
                     <input type="radio"  name="gender" value="male"onChange={handleChange} />
                     <label>Estudiante</label>
-                    <input type="radio" name="position" value="hogwartsStudent"onChange={handleChange}/>
+                    <input type="radio"  name="hogwartsStudent" value ={Boolean("false")} onChange={handleChange}/>
                     <label>Staff</label>
-                    <input type="radio"checked name="position" value="hogwartsStaff"onChange={handleChange}/>
+                    <input type="radio" name="hogwartsStaff" value ={ Boolean("false")} onChange={handleChange}/>
                     </div>
                     <div className="modal_files">
                     <label>Fotografía</label>

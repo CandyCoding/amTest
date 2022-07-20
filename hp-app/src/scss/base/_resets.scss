@@ -18,3 +18,20 @@ input {
     color: var(--color-tertiary);
     background-color: var(--color-fourth);
 }
+
+header {
+    width: 50%;
+    position: relative;
+    left: 750px;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 50px;
+}

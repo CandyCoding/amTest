@@ -2,7 +2,7 @@ import {useState} from 'react';
 import Card from '../Components/CharacterCard';
 import CharacterFilter from '../Components/CharacterFilter';
 import Header from '../Components/Header';
-
+import hplog from '../assets/hplog.png';
 function Home() {
     const [characters,setCharacters] = useState([]);
 
@@ -13,13 +13,16 @@ function Home() {
     }
     return (
       <div className="App">
-        <Header/>
-      <h1>Harry Potter</h1>
-      <h2>selecciona tu filtro</h2>
-      <CharacterFilter/>
-      <Card characters={characters} setCharacters={setCharacters}getAllCharacters={getAllCharacters}/>
-  </div>
+      <Header/>
+  <section>
+  <img src={hplog} alt="Harry Potter logo"/>
+  <h2>Selecciona tu filtro</h2>
+  <CharacterFilter/>
+  </section>
+  <Card characters={characters} setCharacters={setCharacters}getAllCharacters={getAllCharacters}/>
+</div>
   );
   }
+  
   
   export default Home;

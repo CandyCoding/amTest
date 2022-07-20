@@ -9,6 +9,7 @@
     --color-tertiary: #999999;
     --color-fourth: #263238;
     --color-fifth: #6B63B5;
+    --color-sixth: #403B6D;
 
 
     /*general variables for font Weight*/
@@ -22,5 +23,8 @@
     --characteristics: 18px;
 
     /*gradient house colors for cards*/
-    --Gryffindor: linear-gradient(to right, #FF0000, #FED482);
+    $Gryffindor: linear-gradient(to right, #FF0000, #FED482);
+    --Slytherin: linear-gradient(to right #1C792B, #82E95E);
+    --Ravenclaw: linear-gradient(to right, ##0597B7, #66D1FF);
+    --Hufflepuff: linear-gradient(to right, ##FFC700, #FFF388);
 }

@@ -7,13 +7,21 @@ function Card({characters,setCharacters,getAllCharacters,name,getFilterCharacter
         getAllCharacters();
     }
     },[]);
-
+    const houseColor = {
+        Gryffindor: '#FF0000',
+        Slytherin: '#1C792B',
+        Ravenclaw: '#0597B7',
+        Hufflepuff: '#FFC700' 
+    }
+ const notAliveColor = {
+        true: '#FFFFFF',
+        false: '#CCCCCC'
+    }   
   return (
-    <div className='cards_container'>
-        <div>
+    < div className='cards_container'>
         {characters.map(character => (
-            <div className='card_body' key={character.id}>
-                <div className='house_color' name= {character.house}>
+            <div className='card_body' key={character.id}style={character.alive===false ?{backgroundColor:notAliveColor[`${character.alive}`]}:{backgroundColor:notAliveColor[`${character.alive}`]}}>
+                <div className='house_color' name= {character.house} style= {{backgroundColor : houseColor[`${character.house}`]}}>
                 <figure className='card__figure'>
                     <img className='card_photo' src={character.image} alt={character.name}/>
                 </figure>
@@ -30,7 +38,6 @@ function Card({characters,setCharacters,getAllCharacters,name,getFilterCharacter
             </div>
             </div>
         ))}
-    </div>
     </div>
   );
 }
