@@ -1,9 +1,12 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {useState} from 'react';
 import Home from './Pages/Home';
 import './App.scss';
 import CharactersByFilter from './Pages/Charactersbyfilter';
 
+
 function App() {
+
   return (
     <BrowserRouter>
       <Routes>

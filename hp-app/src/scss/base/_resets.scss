@@ -12,3 +12,9 @@ button {
     cursor: pointer;
     font-family: var(--font-family)
 }
+
+input {
+    font-family: var(--font-family);
+    color: var(--color-tertiary);
+    background-color: var(--color-fourth);
+}

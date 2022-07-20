@@ -1,7 +1,9 @@
 import Card from "../Components/CharacterCard";
 import {useParams} from 'react-router-dom';
 import CharacterFilter from '../Components/CharacterFilter';
+import Header from "../Components/Header";
 import {useState,useEffect} from 'react';
+
 function CharactersByFilter(){
     const {name} = useParams();
     const getFilterCharacters = () => {
@@ -16,9 +18,11 @@ function CharactersByFilter(){
     useEffect(() => {
         getFilterCharacters(name);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     ,[]);
     return (
         <div className="App">
+            <Header/>
         <h1>Harry Potter</h1>
         <h2>selecciona tu filtro</h2>
         <CharacterFilter/>
