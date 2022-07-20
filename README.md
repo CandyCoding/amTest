@@ -11,6 +11,7 @@ Accionables de la web:
 Mejoras :
 * Lograr subir los archivos tipo imagen a la database. 
 * Hacer la función de favoritos con Redux.
+* Lograr el degragado en las tarjetas por casa.
 * Testeos unitarios. 
 * Mejorar el código en los archivos Scss ya que al ser mi primer acercamiento a este preprocesador considero no haber aprovechado su potencial como me hubiese gustado, sin embargo ya es un accionable personal aprender más sobre ello y sobre todas las mejoras antes mencionadas. 
 
